@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 public class Constants {
 	// 测试访问地址
-	public final static String URL = "http://118.178.227.232:9010//Account/LogOn";
+	public final static String URL = "http://xxxxx//Account/LogOn";
 	
 	public final static String Path_excel="D:\\Android\\YYGL\\src\\test.yaml";
 //	public final static String URL = "http://114.55.1.85:9011/Account/LogOn";//JLW
@@ -12,8 +12,8 @@ public class Constants {
 	// 登录用户名、密码属性以及属性值
 	public final static By Username_property = By.id("txtUsername");
 	public final static By Passwrod_property = By.className("Password");
-	public final static String Username = "8888";
-	public final static String Password = "112233";
+	public final static String Username = "xxxx";
+	public final static String Password = "xxxx";
 	//内网用户名密码
 //	public final static String Username = "8888";
 //	public final static String Password = "888888";
