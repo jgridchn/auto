@@ -15,8 +15,8 @@ public class Constants {
 	public final static String Username = "xxxx";
 	public final static String Password = "xxxx";
 	//内网用户名密码
-//	public final static String Username = "8888";
-//	public final static String Password = "888888";
+//	public final static String Username = "xxx";
+//	public final static String Password = "xxxxx";
 	// 首页登录按钮属性值
 	public final static By Button_property = By.id("doLog");
 	// 加载成功后页面元素ID唯一值判断
