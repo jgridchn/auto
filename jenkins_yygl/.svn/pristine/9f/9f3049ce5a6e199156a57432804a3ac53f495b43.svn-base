@@ -1,0 +1,159 @@
+package yygl_flow;
+
+import java.lang.reflect.Method;
+
+import mx4j.log.Logger;
+
+import org.openqa.selenium.By;
+import org.testng.Assert;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterClass;
+
+import yygl_Constant.Constants;
+import yygl_Utity.YamlUtil;
+
+import YYGL_Common.GreenNormal;
+import YYGL_Common.Mthead;
+import YYGL_Common.OtherIllgeal;
+import YYGL_Common.PassIllegal;
+import YYGL_Common.Refresh;
+import YYGL_Login.Login;
+
+public class Writer_Reporter {
+	
+	Login lo=new Login();
+	public YamlUtil myYaml;
+	
+	@Test(dataProvider = "dp0")
+	public void Test_001_Login(int j) throws Exception {
+		Mthead.logger
+				.info("*********************************************************************");
+		myYaml = new YamlUtil(Login.driver, "./src/test/java/W_Reporter.yaml");
+		Mthead.SendKey(myYaml.getElement("yygl_login_input"),
+				Constants.Username);
+		Mthead.SendKey(myYaml.getElement("yygl_password_input"),
+				Constants.Password);
+		Mthead.OnClick(myYaml.getElement("yygl_login_button"));
+		Thread.sleep(3000);
+		// 验证是否成功登录首页存在该元素
+		lo.FirstEle(Constants.ID_property);
+		Mthead.logger
+				.info("*********************************************************************");
+
+	}
+	@Test(dataProvider = "dp", enabled = false)
+	public void Test_002_Shaper_Reporter(int j) {
+		// 调用封装的onclick方法
+		Mthead.logger
+				.info("*********************************************************************");
+		Mthead.OnClick(myYaml.getElement("Create_Change"));
+		// 进入iframe
+		Mthead.Iframe(myYaml.getElement("first_iframe"));
+		Assert.assertTrue(Login.driver.getPageSource().contains("搜索日期"));
+		// 点击新增按钮
+		lo.ClickButton(myYaml.getElement("Add_Bot"));
+		Mthead.logger.info("退出该frame");
+		Login.driver.switchTo().defaultContent();
+		// 验证是否弹出新增页面
+		Mthead.Iframe(myYaml.getElement("Change_input_iframe"));
+		Assert.assertTrue(Login.driver.getPageSource()
+				.contains("请上传小于10M的图片文件"));
+		PassIllegal.W_PassIllegal();
+		Mthead.logger
+				.info("*********************************************************************");
+	}
+  @Test(dataProvider="W_Reporter",enabled=false)
+  public void Test_004_W_Reporter(int j,int i,String n) throws InterruptedException {
+
+		Mthead.logger
+				.info("*********************************************************************");
+		Refresh.Tag_Refresh();
+		// Mthead.OnClick(myYaml.getElement("tag_delete"));
+		// 调用封装的onclick方法
+		String[] replace = { j + "" };
+		Mthead.OnClick(myYaml.getValueByKey("Illegal_index", replace));
+		// 进入iframe
+		Mthead.Iframe(myYaml.getElement("Illegal_iframe"));
+		Mthead.WaitEle(myYaml.getBy("Search_text"));
+		// Assert.assertTrue(Login.driver.getPageSource().contains("搜索日期"));
+		// 点击新增按钮
+		lo.driver.findElement(By.id("btnAdd")).click();
+		Login.driver.switchTo().defaultContent();
+		Mthead.logger.info("退出该frame");
+		// 验证是否弹出新增页面
+		Mthead.Iframe(myYaml.getElement("Illegal_input_iframe"));
+		Assert.assertTrue(Login.driver.getPageSource()
+				.contains("请上传小于10M的图片文件"));
+		OtherIllgeal.W_PassIllegal(i);
+//		Mthead.OnClick(myYaml.getElement("Back_Bot"));
+		// 退出内层iframe
+		Mthead.logger
+				.info("*********************************************************************");
+  }
+  
+  
+  @Test(dataProvider="w_green",enabled=false)
+  public void Test_003_W_Green(int i) throws InterruptedException {
+
+		Mthead.logger
+				.info("*********************************************************************");
+		Refresh.Tag_Refresh();
+		Mthead.OnClick(myYaml.getElement("Green"));
+		// 进入iframe
+		Mthead.Iframe(myYaml.getElement("Green_iframe"));
+		Mthead.WaitEle(myYaml.getBy("Search_text"));
+		// Assert.assertTrue(Login.driver.getPageSource().contains("搜索日期"));
+		// 点击新增按钮
+		lo.driver.findElement(By.id("btnAdd")).click();
+		Login.driver.switchTo().defaultContent();
+		Mthead.logger.info("退出该frame");
+		// 验证是否弹出新增页面
+		Mthead.Iframe(myYaml.getElement("Green_input_iframe"));
+		Assert.assertTrue(Login.driver.getPageSource()
+				.contains("请上传小于10M的图片文件"));
+		GreenNormal.W_GreenNormal();
+//		Mthead.OnClick(myYaml.getElement("Back_Bot"));
+		// 退出内层iframe
+		Mthead.logger
+				.info("*********************************************************************");
+  }
+  @BeforeClass
+	public void beforeClass() {
+
+		// 打开浏览器
+		lo.StartLogin();
+
+	}
+
+	@AfterClass
+	public void afterClass() {
+		// 关闭浏览器
+		lo.closer();
+
+	}
+	@DataProvider
+	public Object[][] dp0() {
+		return new Object[][] { new Object[] { 0 }, };
+	}
+
+	@DataProvider
+	public Object[][] dp() {
+		return new Object[][] { new Object[] { 1 }, };
+	}
+	@DataProvider
+	public Object[][]  W_Reporter(){
+		 return new Object[][] { 
+				 new Object[] { 4,1, "违规绿通" },
+				new Object[] { 5,2, "冲跳磅" }, 
+				new Object[] { 6,3, "改胎型" },
+				new Object[] { 7,4, "换卡" },
+				new Object[] { 8, 5,"假冒免费" },new Object[] { 9,6, "违规ETC" }, new Object[] { 10,7, "无理由" }, 
+				 };
+	}
+	@DataProvider
+	public Object[][] w_green() {
+		return new Object[][] { new Object[] { 1 }, };
+	}
+}

@@ -1,0 +1,15 @@
+eclipse.preferences.version=1
+encoding//src/test/java/W_Reporter.yaml=UTF-8
+encoding//src/test/java/YYGL_Common/GreenNormal.java=UTF-8
+encoding//src/test/java/YYGL_Common/Iframe.java=UTF-8
+encoding//src/test/java/YYGL_Common/Mthead.java=UTF-8
+encoding//src/test/java/YYGL_Common/OtherIllgeal.java=UTF-8
+encoding//src/test/java/YYGL_Common/PassIllegal.java=UTF-8
+encoding//src/test/java/YYGL_Login/Login.java=UTF-8
+encoding//src/test/java/log4j.properties=UTF-8
+encoding//src/test/java/test.yaml=UTF-8
+encoding//src/test/java/yygl_Constant/Constants.java=UTF-8
+encoding//src/test/java/yygl_Utity/YamlUtil.java=UTF-8
+encoding//src/test/java/yygl_flow/UICheck.java=UTF-8
+encoding//src/test/java/yygl_flow/Writer_Reporter.java=UTF-8
+encoding//src/test/java/yygl_mysql/Mysql.java=UTF-8

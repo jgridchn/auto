@@ -1,0 +1,114 @@
+#charset=utf-8
+yygl_login_input:
+  type:id
+  value:txtUsername
+yygl_password_input:
+  type:id
+  value:"txtPassword"
+  
+yygl_login_button:
+  type:id
+  value:doLog
+#小改大模块元素
+Create_Change:
+  type:xpath
+  value:"//*[text()='小改大填报']"  
+Search_text:
+  type:xpath
+  value:"/html/body/div[2]/div[2]/div[1]"
+Add_Bot:
+  type:id
+  value:"btnAdd"
+Back_Bot:
+  type:xpath
+  value:"//a[text()='返回']"  
+tag_delete:
+  type:xpath
+  value:"//*[@id='framecenter']/div[1]/ul/li[2]/div[3]"
+#首个iframe
+first_iframe:
+  type:xpath
+  value:"//iframe[contains(@src,'/ODMS/CreateIncomeS2B/List?')]"
+Change_input_iframe:
+  type:xpath
+  value:"//iframe[contains(@src,'/ODMS/CreateIncomeS2B/Add?')]"
+
+#正常绿通
+Green_Pass:
+  type:xpath
+  value:"//*[text()='正常绿通']"
+Green_iframe:
+  type:xpath
+  value:"//iframe[contains(@src,'/ODMS/CreateIncomeNormal/List?')]"
+
+#illegal不合法
+Illegal_index:
+  type:xpath
+  value:"//*[@id='menutree_%s_span']"
+  #Other的iframe
+Illegal_iframe:
+  type:xpath
+  value:"//iframe[contains(@src,'/ODMS/CreateIncomeOther/List?')]"
+Illegal_input_iframe:
+  type:xpath
+  value:"//iframe[contains(@src,'/ODMS/CreateIncomeOther/Add?')]"
+#fill补填
+Fill:
+  type:id
+  value:"menutree_11_a"
+Fill_index:
+  type:xpath
+  value:"//*[@id='menutree_1%s_a']"
+Fill_iframe:
+  type:xpath
+  value:"//iframe[contains(@src,'/ODMS/CreateIncomeS2B/FillList')]"
+Fill_other_iframe:
+  type:xpath
+  value:"//iframe[contains(@src,'/ODMS/CreateIncomeOther/FillList')]"
+#Verify审核
+Verify:
+  type:id
+  value:menutree_20_span
+Verify_index:
+  type:xpath
+  value:"//*[@id='menutree_2%s_span']"
+Verify_iframe:
+  type:xpath
+  value:"//iframe[contains(@src,'/ODMS/CreateIncomeS2B/CheckList')]"
+Verify_other_iframe:
+  type:xpath
+  value:"//iframe[contains(@src,'/ODMS/CreateIncomeOther/CheckList')]"
+#Reporter统计报表
+Reporter:
+  type:id
+  value:menutree_29_span
+Reporter_index:
+  type:xpath
+  value:"//*[@id='menutree_3%s_span']"
+Reporter_car_iframe:
+  type:xpath
+  value:"//iframe[contains(@src,'/JLW/CarFlow/CarFlow')]"
+Reporter_carMonth_iframe:
+  type:xpath
+  value:"//iframe[contains(@src,'/JLW/CarFlowMonth/CarFlowMonth')]"
+Reporter_carIncome_iframe:
+  type:xpath
+  value:"//iframe[contains(@src,'/JLW/CarIncome/CarIncome')]"
+Reporter_carIncomeMonth_iframe:
+  type:xpath
+  value:"//iframe[contains(@src,'/JLW/CarIncomeMonth/CarIncomeMonth')]"
+Reporter_carIncomeDetail_iframe:
+  type:xpath
+  value:"//iframe[contains(@src,'/JLW/CarIncomeDetail/CarIncomeDetail')]"
+Reporter_carIncomeIllegal_iframe:
+  type:xpath
+  value:"//iframe[contains(@src,'/JLW/CarIncomeIllegal/CarIncomeIllegal')]"
+Reporter_carMixedDetail_iframe:
+  type:xpath
+  value:"//iframe[contains(@src,'/JLW/CarMixedDetail/CarMixedDetail')]"
+Reporter_carFillInfo_iframe:
+  type:xpath
+  value:"//iframe[contains(@src,'/JLW/CarFillInfo/CarFillInfo')]"
+Reporter_IllegalMinute_iframe:
+  type:xpath
+  value:"//iframe[contains(@src,'/ODMS/IllegalMinute/List')]"

@@ -1,0 +1,165 @@
+#charset=utf-8
+yygl_login_input:
+  type:id
+  value:txtUsername
+yygl_password_input:
+  type:id
+  value:"txtPassword"
+  
+yygl_login_button:
+  type:id
+  value:doLog
+#小改大模块元素
+Create_Change:
+  type:xpath
+  value:"//*[text()='小改大填报']"  
+Search_text:
+  type:xpath
+  value:"/html/body/div[2]/div[2]/div[1]"
+Add_Bot:
+  type:id
+  value:"btnAdd"
+Back_Bot:
+  type:xpath
+  value:"//a[text()='返回']"  
+tag_delete:
+  type:xpath
+  value:"//*[@id='framecenter']/div[1]/ul/li[2]/div[3]"
+#首个iframe
+first_iframe:
+  type:xpath
+  value:"//iframe[contains(@src,'/ODMS/CreateIncomeS2B/List?')]"
+Change_input_iframe:
+  type:xpath
+  value:"//iframe[contains(@src,'/ODMS/CreateIncomeS2B/Add?')]"
+  
+#小改大新增元素
+w_date:
+  type:id
+  value:n_date
+w_time:
+  type:id
+  value:n_time
+w_station:
+  type:id
+  value:vc_station_name
+  
+w_station_selection:
+  type:xpath
+  value:"//td[contains(text(),'岭下朱')]"
+  
+w_operator:
+  type:id
+  value:vc_op_name
+#操作员的iframe
+w_Oper_iframe:
+  type:xpath
+  value:"//iframe[contains(@src,'/ODMS/Operator/Selecter?')]"
+
+w_select_operator:
+  type:id
+  value:maingrid|1|r1002|c102
+w_select_oper_btn:
+  type:class
+  value:"btn2"
+
+w_class:
+  type:id
+  value:n_shift_code_txt 
+w_class_select:
+  type:xpath
+  value:"//td[contains(text(),'早班')]"
+w_license_color:
+  type:id
+  value:vc_vehicle_license_color_txt
+w_license_color_select:
+  type:xpath
+  value:"//td[contains(text(),'黄')]"
+    
+w_vehicle_license:
+  type:id
+  value:vc_vehicle_license
+w_type:
+  type:id
+  value:vc_change_type
+w_type_select:
+  type:xpath
+  value:"//td[contains(text(),'客车小改大')]"
+  
+w_before_income:
+  type:id
+  value:d_befor_price
+w_after_income:
+  type:id
+  value:d_after_price
+w_lane:
+  type:id
+  value:n_lane
+w_serial:
+  type:id
+  value:n_serial
+
+w_category:
+  type:id
+  value:c_category_txt
+w_category_select:
+  type:xpath
+  value:"//td[text()='客']"
+  
+w_img:
+  type:id
+  value:SWFUpload_0
+w_btn:
+  type:id
+  value:asave
+  
+#其他违规填报
+#illegal不合法
+Illegal_index:
+  type:xpath
+  value:"//*[@id='menutree_%s_span']"
+  #Other的iframe
+Illegal_iframe:
+  type:xpath
+  value:"//iframe[contains(@src,'/ODMS/CreateIncomeOther/List?')]"
+Illegal_input_iframe:
+  type:xpath
+  value:"//iframe[contains(@src,'/ODMS/CreateIncomeOther/Add?')]"
+#违规小类 
+w_violation_type:
+  type:id
+  value:vc_violation_type_txt
+w_violation_select_type:
+  type:xpath
+  value:"//td[contains(@value,0%s01)]"
+w_save_loss:
+  type:id
+  value:d_save_loss
+#车型
+w_vehicle_class:
+  type:id
+  value:c_vehicle_class_txt
+w_vehicle_class_select:
+  type:xpath
+  value:"//td[text()='3']"
+#卡号
+w_card:
+  type:id
+  value:vc_card_id
+w_mark:
+  type:id
+  value:vc_marks
+w_alter_btn:
+  type:xpath
+  value:"//*[text()='确定']"
+#正常绿通
+Green:
+  type:id
+  value:menutree_3_span
+Green_iframe:
+  type:xpath
+  value:"//iframe[contains(@src,'/ODMS/CreateIncomeNormal/List?')]"
+Green_input_iframe:
+  type:xpath
+  value:"//iframe[contains(@src,'/ODMS/CreateIncomeNormal/Add?')]"
+
