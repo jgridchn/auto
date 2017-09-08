@@ -7,8 +7,8 @@ public class Constants {
 	public final static String URL = "http://xxxxx//Account/LogOn";
 	
 	public final static String Path_excel="D:\\Android\\YYGL\\src\\test.yaml";
-//	public final static String URL = "http://114.55.1.85:9011/Account/LogOn";//JLW
-//	public final static String URL="http://10.33.181.177:9004/Home/Index";//金丽温内网
+//	public final static String URL = "http://xxx";//JLW
+//	public final static String URL="http://xxx";//金丽温内网
 	// 登录用户名、密码属性以及属性值
 	public final static By Username_property = By.id("txtUsername");
 	public final static By Passwrod_property = By.className("Password");
