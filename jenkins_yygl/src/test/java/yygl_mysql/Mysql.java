@@ -14,7 +14,7 @@ public class Mysql {
 	String sql;
 	static String sql_01;
 	static String sql_02;
-	static String url = "jdbc:mysql://rm-bp1c0xb0vs8a0sh4ro.mysql.rds.aliyuncs.com:3306/odms_debug_jlw?"
+	static String url = "jdbc:mysql://xxx"
 			+ "user=xxxx&password=xxxx";
 
 	 static String sql_type;
